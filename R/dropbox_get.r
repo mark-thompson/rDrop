@@ -7,7 +7,6 @@
 #'  the returned value in here (avoids unnecessary footprint).
 #' @param binary set if the object you are retrieving is binary content.
 #' @param ... optional additional curl options (debugging tools mostly)..
-#' @param root  the name of the root folder
 #' @return R object
 #' @export dropbox_get
 #' @examples \dontrun{
@@ -15,7 +14,7 @@
 #'}
 dropbox_get <-
 function(cred, file_to_get, curl = getCurlHandle(), ..., binary = NA,
-         root = "dropbox", .checkIfExists = TRUE)
+         .checkIfExists = TRUE)
 {
     if (!is(cred, "DropboxCredentials") || missing(cred))
         missingCredentialsError()
@@ -27,7 +26,7 @@ function(cred, file_to_get, curl = getCurlHandle(), ..., binary = NA,
     }
     
     invisible(suppressWarnings(OAuthRequest(cred, "https://api-content.dropbox.com/1/files/auto/",
-                                            list(root = root, path = file_to_get), "GET",
+                                            list(path = file_to_get), "GET",
                                             binary = binary, ..., curl = curl)))
 }
 # API documentation:
