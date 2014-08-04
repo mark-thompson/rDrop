@@ -16,7 +16,6 @@ Bug reports: http://github.com/karthikram/rDrop/issues
 Depends:
     RJSONIO,
     RCurl (>= 1.6),
-    ROAuth (>= 0.92.0),
     methods,
     plyr,
     stringr
