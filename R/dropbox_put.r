@@ -20,7 +20,7 @@ function(cred, what, filename = what, curl = getCurlHandle(), ..., verbose = FAL
          contentType = "application/octet-stream")
 {
     filename = paste(filename, collapse = "/")
-    url <- sprintf("https://api-content.dropbox.com/1/files_put/dropbox/%s", filename)
+    url <- sprintf("https://api-content.dropbox.com/1/files_put/auto/%s", filename)
 
      #XXX what about raw?
     size = if(is(what, "AsIs")) {

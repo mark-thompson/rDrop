@@ -45,7 +45,7 @@ function(cred, file, object,
                    paste(str_trim(str_extract(file, "[^.]*")), ext, sep = "")
                 else
                    file
-    url <- sprintf("https://api-content.dropbox.com/1/files_put/dropbox/%s", 
+    url <- sprintf("https://api-content.dropbox.com/1/files_put/auto/%s", 
                     filename)
     
     z = serialize(object, NULL)

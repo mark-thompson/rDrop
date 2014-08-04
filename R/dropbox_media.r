@@ -21,7 +21,7 @@ function(cred, path = NULL, curl = getCurlHandle(), ..., .checkIfExists = TRUE) 
         stop("Content does not exist in dropbox", call. = FALSE)
     }
     if (!is.null(path)) {
-        url <- paste("https://api.dropbox.com/1/media/dropbox/", 
+        url <- paste("https://api.dropbox.com/1/media/auto/", 
             path, sep = "")
     }
     media <- fromJSON(OAuthRequest(cred, url), ..., curl = curl)

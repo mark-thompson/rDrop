@@ -26,7 +26,7 @@ function(cred, file_to_get, curl = getCurlHandle(), ..., binary = NA,
         stop("File or folder does not exist", call. = FALSE)
     }
     
-    invisible(suppressWarnings(OAuthRequest(cred, "https://api-content.dropbox.com/1/files/",
+    invisible(suppressWarnings(OAuthRequest(cred, "https://api-content.dropbox.com/1/files/auto/",
                                             list(root = root, path = file_to_get), "GET",
                                             binary = binary, ..., curl = curl)))
 }

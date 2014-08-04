@@ -66,7 +66,7 @@ function(cred, ..., list = character(), file = stop("'file' must be specified"),
                 else
                     file
 #XXX call getPath()
-    url <- sprintf("https://api-content.dropbox.com/1/files_put/dropbox/%s", filename)
+    url <- sprintf("https://api-content.dropbox.com/1/files_put/auto/%s", filename)
     
     con <- rawConnection(raw(), "w")
     on.exit(close(con))

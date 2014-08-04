@@ -30,7 +30,7 @@ dropbox_share <- function(cred, file = NULL, curl = getCurlHandle(),
     if (grepl("^/", file)) 
         file <- str_sub(file, 2)
     
-    path_to_share <- sprintf("https://api.dropbox.com/1/shares/dropbox/%s", 
+    path_to_share <- sprintf("https://api.dropbox.com/1/shares/auto/%s", 
         file, sep = "")
     result <- fromJSON(OAuthRequest(cred, path_to_share, , ..., curl = curl))
     res <- list()
