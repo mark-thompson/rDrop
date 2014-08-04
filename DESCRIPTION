@@ -23,6 +23,7 @@ Imports:
     RJSONIO,
     RCurl,
     ROAuth,
+    digest,
     methods,
     plyr,
     stringr
