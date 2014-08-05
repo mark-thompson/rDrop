@@ -7,6 +7,7 @@ import(stringr)
 
 
 export(db.read.csv)
+export(db.get.xlsx)
 export(dropbox.file.info)
 export(dropbox_acc_info)
 export(dropbox_auth)

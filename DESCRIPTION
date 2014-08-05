@@ -29,6 +29,7 @@ Imports:
     stringr
 Collate:
     db.wrappers.r
+    db.wrapperx.r
     dropbox_acc_info.r
     dropbox_auth.r
     dropbox_copy.r
