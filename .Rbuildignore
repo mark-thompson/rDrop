@@ -1,7 +1,9 @@
 new_test.R
 screenshots
+tests
 testing.r
 README.md
 .gitignore
 GNUmakefile
-
+.Rdata
+rDrop.Rproj
