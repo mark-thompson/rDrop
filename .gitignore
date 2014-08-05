@@ -1,7 +1,9 @@
 Ignore/
+tests/
 testing.R
 new_test.R
 .Rhistory
 .DS_Store
 .Rproj.user
 rDrop.Rproj
+*.Rdata
