@@ -34,7 +34,11 @@ dropbox_search <- function(cred, query = NULL, deleted = FALSE,
     query <- basename(query)
     results <- fromJSON(OAuthRequest(cred, "https://api.dropbox.com/1/search/auto/", 
         list(query = query, include_deleted = deleted), ..., curl = curl))
-    search_results <- formatted_results <- ldply(results, data.frame)
+    
+    res <- suppressWarnings(rbind_all(lapply(results, data.frame)))
+    res$.id <- names(results)
+    
+    search_results <- formatted_results <- res
                                                                     # If user wanted to search for a file in a specific
                                                                     #   location.
     if (!identical(full_path, query)) {
