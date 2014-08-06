@@ -64,10 +64,12 @@ dropbox_search <- function(cred, query = NULL, deleted = FALSE,
     if (dim(search_results)[1] == 0) {
         return(search_results[0, 0])
     }
-    if (!verbose & !empty(small_results)) {
+    if (!verbose & 
+        !(is.null(small_results) || nrow(small_results) == 0 || ncol(small_results) == 0)) {
         return(small_results)
     }
-    if (verbose & !empty(small_results)) {
+    if (verbose & 
+        !(is.null(small_results) || nrow(small_results) == 0 || ncol(small_results) == 0)) {
         return(search_results)
     }
 }
