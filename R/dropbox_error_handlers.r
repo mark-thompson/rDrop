@@ -38,10 +38,7 @@ function(cred, path = NULL, is_dir = NULL, ..., curl = getCurlHandle())
         }
         query <- basename(path)
         res <- dropbox_search(cred, query, ..., curl = curl)
-        if (is.null(res)) {
-            response <- FALSE
-        }
-        if (empty(res)) {
+        if ((is.null(res) || nrow(res) == 0 || ncol(res) == 0)) {
             response <- FALSE
         }
                                                                                 # OK, object exists, but let's see if there was more than
