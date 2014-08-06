@@ -42,8 +42,10 @@ function(cred, path = character(), verbose = FALSE,
     
     names(metadata$contents) <- basename(sapply(metadata$contents, 
                                                 `[[`, "path"))
-                                                
-    file_sys <- ldply(metadata$contents, data.frame)
+    
+    file_sys <- suppressWarnings(rbind_all(lapply(metadata$contents, data.frame)))
+    file_sys$.id <- names(metadata$contents)
+    
     if (!is.null(pattern)) {
         matches <- str_detect(file_sys$.id, pattern)
         file_sys <- file_sys[matches, ]

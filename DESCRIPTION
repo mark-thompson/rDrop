@@ -17,7 +17,7 @@ Depends:
     RJSONIO,
     RCurl (>= 1.6),
     methods,
-    plyr,
+    dplyr,
     stringr
 Imports:
     RJSONIO,
@@ -25,7 +25,7 @@ Imports:
     ROAuth,
     digest,
     methods,
-    plyr,
+    dplyr,
     stringr
 Collate:
     db.wrappers.r

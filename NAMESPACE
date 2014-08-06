@@ -1,7 +1,7 @@
 import(RCurl)
 import(RJSONIO)
 import(ROAuth)
-import(plyr)
+import(dplyr)
 import(stringr)
 
 
