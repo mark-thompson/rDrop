@@ -3,6 +3,7 @@ import(RJSONIO)
 import(ROAuth)
 import(dplyr)
 import(stringr)
+import(digest)
 
 
 

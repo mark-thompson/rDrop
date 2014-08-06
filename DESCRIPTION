@@ -18,7 +18,8 @@ Depends:
     RCurl (>= 1.6),
     methods,
     dplyr,
-    stringr
+    stringr,
+    digest
 Imports:
     RJSONIO,
     RCurl,
@@ -26,7 +27,8 @@ Imports:
     digest,
     methods,
     dplyr,
-    stringr
+    stringr,
+    digest
 Collate:
     db.wrappers.r
     db.wrapperx.r
